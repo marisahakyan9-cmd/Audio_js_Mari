@@ -8,7 +8,9 @@ var data = {
         "Yellowheart__Rosa_Linn_-_Vardaguyn",
         "Yellowheart_-_Felo_(3.33)_-_Mi_Tesak",
         "Yellowheart_-_Pntrum_Em",
-        "Yellowheart_-_Shat_Pind"
+        "Yellowheart_-_Shat_Pind",
+        "Zaz-Que_vendra",
+        "Zaz-Je_veux"
     ],
     song: [
         "music/Lav_Eli_-_Autumn_64705516.mp3",
@@ -19,7 +21,9 @@ var data = {
         "music/Yellowheart__Rosa_Linn_-_Vardaguyn.mp3",
         "music/Yellowheart_-_Felo_(3.33)_-_Mi_Tesak.mp3",
         "music/Yellowheart_-_Pntrum_Em.mp3",
-        "music/Yellowheart_-_Shat_Pind.mp3"
+        "music/Yellowheart_-_Shat_Pind.mp3",
+        "music/Zaz-Que_vendra.mp3",
+        "music/Zaz-Je_veux.mp3"
         
     ],
     poster: [
@@ -31,7 +35,9 @@ var data = {
         "https://cdn-images.dzcdn.net/images/cover/c3d1b0f38bbba1248a3a980acf4269c2/0x1900-000000-80-0-0.jpg",
         "https://i.ytimg.com/vi/dlWtTGL47c0/maxresdefault.jpg",
         "https://i.ytimg.com/vi/hNcN6gzDqHA/hqdefault.jpg",
-        "https://i.ytimg.com/vi/vu8Znyv_zZw/hqdefault.jpg"
+        "https://i.ytimg.com/vi/vu8Znyv_zZw/hqdefault.jpg",
+        "https://i.scdn.co/image/ab67616d0000b273a0560dc982f712d788df75da",
+        "https://i.scdn.co/image/ab67616d0000b2733b5969aba116e8248a3e6369"
     ]
         
     
