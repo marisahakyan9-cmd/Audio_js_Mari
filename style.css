@@ -19,7 +19,7 @@ body {
 }
 
 .player {
-    background-color: rgba(163, 156, 255, 0.5);
+    /* background-color: rgba(163, 156, 255, 0.5);
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -28,7 +28,21 @@ body {
     width: 300px;
     border-radius: 25px;
     overflow: hidden;
-    box-shadow: 4px 10px 10px;
+    box-shadow: 4px 10px 10px; */
+    background-color: rgba(163, 156, 255, 0.7);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    width: 300px;
+    height: 600px;          /* 480px-ի փոխարեն */
+    border-radius: 25px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
 }
 
 .row1 {
@@ -50,9 +64,10 @@ body {
 }
 
 .row2 {
-    width: 100%;
-    height: 50%;
-    background-color: rgba(216, 188, 224, 0.442);
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    background-color:rgba(216,188,224,.442);
 }
 
 .play {
@@ -94,20 +109,31 @@ body {
 }
 
 .handle {
-    width: 80%;
+    /* width: 80%;
     height: 5px;
     background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%);
+    border-radius: 25px; */
+    width: 80%;
+    height: 6px;
+    background: #555; /* Սա կլինի դատարկ գծի հետևի ֆոնը */
     border-radius: 25px;
+    position: relative;
+    cursor: pointer;
 }
 
 #fill {
-    height: 8px;
+    /* height: 8px;
     width: 3px;
     border-radius: 25px;
     background-color: lightblue;
     z-index: 999;
     margin-top: -1.5px;
-    margin-left: -1.5px;
+    margin-left: -1.5px; */
+    height: 100%;
+    width: 0%; /* Սկզբում 0% է, հետո JS-ով կմեծանա */
+    border-radius: 25px;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 100%); /* Քո gradient-ը տեղափոխում ենք լրացվող մասի վրա */
+    z-index: 999;
 }
 
 #currentTime {
@@ -153,4 +179,69 @@ body {
     width: 15px;
     background-size: cover;
     margin: 5px;  
+}
+.lyrics-section {
+    /* height: 130px; 
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); */
+    flex: 1;
+    width: 100%;
+
+    overflow-y: auto;
+    padding: 15px;
+    box-sizing: border-box;
+
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,.3);
+}
+
+#lyrics-text {
+    /* font-family: monospace;
+    font-size: 13px;
+    color: #4a0e4e; 
+    white-space: pre-line; 
+    line-height: 1.4; */
+    font-family: monospace;
+    font-size: 15px;
+    
+    color: #4a0e4e;
+    white-space: pre-line;
+    white-space:pre-wrap;
+    word-break:break-word;
+    font-size:15px;
+    line-height:1.7;
+    margin:0;
+}
+
+/* Գեղեցկացնենք scrollbar-ը, որ կոպիտ չերևա */
+.lyrics-section::-webkit-scrollbar {
+    width: 5px;
+}
+.lyrics-section::-webkit-scrollbar-thumb {
+    background: rgba(163, 156, 255, 0.5);
+    border-radius: 10px;
+}
+/* Յուրաքանչյուր տողի սկզբնական տեսքը */
+.lyric-line {
+    font-size: 15px;
+    color: #4a0e4e;
+    opacity: 0.4; /* Ոչ ակտիվ տողերը կիսաթափանցիկ են */
+    margin: 15px 0;
+    text-align: center; /* Բառերը կենտրոնացնում ենք */
+    transition: all 0.3s ease; /* Սահուն անցում ակտիվանալիս */
+}
+
+/* Ակտիվ տողի ոճը */
+.lyric-line.active {
+    opacity: 1;
+    color: #ffffff; /* Կամ ցանկացած վառ գույն, որը լավ կերևա ձեր ֆոնին */
+    font-size: 18px;
+    font-weight: bold;
+    transform: scale(1.05); /* Թեթևակի մեծացնում ենք */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
